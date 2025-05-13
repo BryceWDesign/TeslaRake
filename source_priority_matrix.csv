@@ -1,0 +1,7 @@
+Source,Avg Output (mW),Cost Factor (1-5),Reliability (1-5),Compactness (1-5),Priority Score
+RF Scavenging,20,2,5,5,88
+Solar (Indoor),80,3,4,3,80
+Solar (Outdoor),300,3,5,4,95
+Thermoelectric,50,3,4,3,75
+Piezoelectric,10,2,3,4,60
+Triboelectric,5,1,2,5,55
