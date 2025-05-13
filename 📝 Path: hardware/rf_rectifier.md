@@ -1,0 +1,49 @@
+[Antenna] ---||---+---|<|---+---||--- GND
+               C1     D1     C2
+                     |
+                  [+] Supercap (~1F)
+                     |
+                Diode → To Supercap Staging Bus  
+
+- **C1** = Matching capacitor tuned to frequency band (e.g. 2.4GHz Wi-Fi, FM, etc.)
+- **D1** = Schottky diode (fast, low Vf)
+- **C2** = Bypass ceramic for ripple suppression
+
+---
+
+### Layout Tips
+
+- Use **separate parallel antennas**, each tuned to different bands:
+  - Antenna 1: 2.4GHz Wi-Fi (PCB trace)
+  - Antenna 2: 800–900MHz (cellular)
+  - Antenna 3: FM band (wire whip or telescoping)
+- PCB layout must minimize path length between diode and capacitor
+- **Shielded enclosures degrade RF collection** — antennas must be exposed or external
+
+---
+
+## Output Characteristics
+
+- Voltage range: 50mV–500mV (depends on environment)
+- Current: ~µA range, ideal for trickle
+- Requires boost converter (e.g. LTC3108, MAX756) for usable 3.3V–5V
+
+---
+
+## Real-World Test Reference
+
+- Verified ambient RF collection in urban indoor environment:
+  - ~160 µW at 2.4GHz with tuned dipole and HSMS-2852
+  - ~300 µW across FM band near window with ~1m whip
+
+---
+
+## BOM for Basic RF Module (1 Band)
+
+| Qty | Component             | Description                     | Source                         |
+|-----|------------------------|---------------------------------|--------------------------------|
+| 1   | PCB Dipole Antenna    | 2.4GHz Wi-Fi tuned              | DIY or online module           |
+| 1   | HSMS-2852 Diode       | RF Schottky                     | Digi-Key, Mouser               |
+| 1   | 10nF Ceramic Cap      | 0805/0603                       | Any electronics supplier       |
+| 1   | 0.47F Supercapacitor  | 5.5V rated                      | Adafruit, SparkFun, AliExpress |
+| 1   | Boost Converter IC    | LTC3108 or MAX756               | Optional, for system voltage   |
