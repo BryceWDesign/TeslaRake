@@ -1,0 +1,7 @@
+Designator, Quantity, Component, Description, Manufacturer, Part Number, Package
+U1, 1, ESP32-WROOM-32, WiFi + BT MCU Module, Espressif, ESP32-WROOM-32, Module
+D1-D4, 4, 1N5819, Schottky Diode, ON Semi, 1N5819, DO-41
+C1-C3, 3, 10uF Capacitor, Electrolytic 25V, Nichicon, UVR1E100MDD1TD, Radial
+R1, 1, 10k Ohm Resistor, 1/4W ±1%, Yageo, CFR-25JB-52-10K, Axial
+Q1, 1, IRF540N, N-Channel MOSFET, Vishay, IRF540NPBF, TO-220
+CON1, 1, Terminal Block, 2-pin screw terminal, Phoenix, 1725657, TH
